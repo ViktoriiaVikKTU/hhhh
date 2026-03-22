@@ -1,96 +1,131 @@
-.parallax {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.lost-found-dup {
-    position: absolute;
-    inset: 0;
-}
-
-.frame-main {
-    width: 90vw;
-    max-width: 900px;
-    aspect-ratio: 271/298;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-style: preserve-3d;
-}
-
+/* TEXT */
 .lost-found-orig {
-    color: #f4eddd;
-    text-align: center;
-    text-shadow: 0 -2px 25.1px rgba(0, 0, 0, 0.35);
-    font-family: "Instrument Serif", "Playfair Display", serif;
-    font-size: 173px;
-    font-weight: 400;
-    line-height: normal;
-    max-width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+	color: #3D3333;
+	text-align: center;
+	text-shadow: 0 -2px 25.1px rgba(0, 0, 0, 0.35);
+	font-family: "Instrument Serif", "Playfair Display", serif;
+	font-size: 173px;
+	font-weight: 400;
+	line-height: normal;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
 }
 
+/* Lit spotlight layer — sits on top, same position */
 .lost-found-lit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    text-align: center;
-    font-family: "Instrument Serif", "Playfair Display", serif;
-    font-size: 173px;
-    font-weight: 400;
-    line-height: normal;
-    background: radial-gradient(circle at 50% 50%, #fff8ee 0%, rgba(244, 237, 221, 0.6) 35%, transparent 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    pointer-events: none;
-    z-index: 10;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	text-align: center;
+	font-family: "Instrument Serif", "Playfair Display", serif;
+	font-size: 173px;
+	font-weight: 400;
+	line-height: normal;
+
+	background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	pointer-events: none;
+	z-index: 10;
+}
+
+/* Контейнер для секції */
+.parallax {
+	position: relative;
+	width: 100%;
+	height: 100vh;
 }
 
 .lost-found-orig-span {
-    font-family: "Instrument Serif", "Playfair Display", serif;
-    font-weight: 400;
+	font-family: 'Instrument Serif', serif;
+	font-size: 173px;
+	font-weight: 400;
 }
 
 .lost-found-orig-span2 {
-    font-family: "Instrument Serif", "Playfair Display", serif;
-    font-weight: 400;
-    font-style: italic;
+	font-family: 'IslandMoments', serif;
+	font-size: 218px;
+	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+	.lost-found-orig-span,
+	.lost-found-orig-span2 {
+		font-size: calc(8vw + 40px);
+	}
+}
+
+
+.frame-main {
+	width: 90vw;
+	height: auto;
+	max-width: 900px;
+	aspect-ratio: 271/298;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-style: preserve-3d;
+	will-change: transform;
+}
+
+/* Стиль для тексту */
+.scroll-to-explore {
+	color: #F4EDDD;
+	font-family: "Instrument Serif";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.8;
+	animation: fadeIn 5s ease-in-out 6s forwards;
 }
 
 /* Оголошення анімації fadeIn */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
-/* Стилі для елемента scroll-to-explore */
-.scroll-to-explore {
-    color: #f4eddd;
-    font-family: "Instrument Serif", "Playfair Display", serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    opacity: 0;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: fadeIn 5s ease-in-out 6s both;
+.scene {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.flowers {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#revealCanvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	cursor: none;
 }
