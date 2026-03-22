@@ -8,9 +8,10 @@ const ParallaxSection = () => {
       style={{
         background: 'linear-gradient(rgba(29, 20, 8, 0.868), rgba(29, 20, 8, 0.912)), url("img/main_background.png")',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
         height: '100vh',
-        width: '100vw',
+        width: '100%',
       }}
     >
       <div className="lost-found-dup">

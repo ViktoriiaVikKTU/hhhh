@@ -4,7 +4,7 @@
 	text-align: center;
 	text-shadow: 0 -2px 25.1px rgba(0, 0, 0, 0.35);
 	font-family: "Instrument Serif", "Playfair Display", serif;
-	font-size: 173px;
+	font-size: clamp(36px, 6vw, 96px);
 	font-weight: 400;
 	line-height: normal;
 	max-width: 100%;
@@ -24,7 +24,7 @@
 	white-space: nowrap;
 	text-align: center;
 	font-family: "Instrument Serif", "Playfair Display", serif;
-	font-size: 173px;
+	font-size: clamp(36px, 6vw, 96px);
 	font-weight: 400;
 	line-height: normal;
 
@@ -46,13 +46,13 @@
 
 .lost-found-orig-span {
 	font-family: 'Instrument Serif', serif;
-	font-size: 173px;
+	font-size: clamp(36px, 6vw, 96px);
 	font-weight: 400;
 }
 
 .lost-found-orig-span2 {
 	font-family: 'IslandMoments', serif;
-	font-size: 218px;
+	font-size: clamp(46px, 7.5vw, 121px);
 	font-weight: 400;
 }
 
@@ -60,15 +60,15 @@
 
 	.lost-found-orig-span,
 	.lost-found-orig-span2 {
-		font-size: calc(8vw + 40px);
+		font-size: calc(8vw + 20px);
 	}
 }
 
 
 .frame-main {
-	width: 90vw;
+	width: 50vw;
 	height: auto;
-	max-width: 900px;
+	max-width: 500px;
 	aspect-ratio: 271/298;
 	position: absolute;
 	top: 50%;
