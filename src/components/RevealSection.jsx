@@ -24,8 +24,8 @@ const RevealSection = () => {
         x: e.clientX,
         y: e.clientY,
         age: 0,
-        maxAge: 180 + Math.random() * 80,
-        w: 100 + Math.random() * 80,
+        maxAge: 80 + Math.random() * 40,
+        w: 50 + Math.random() * 30,
       });
       if (pts.length > 200) pts.shift();
     };
