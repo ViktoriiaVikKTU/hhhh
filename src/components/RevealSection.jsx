@@ -103,6 +103,10 @@ const RevealSection = () => {
       <img className="photo-under" src="img/photo.png" alt="Photo" />
       <img className="flowers" src="img/flower.png" alt="Flowers" />
       <canvas ref={canvasRef} id="revealCanvas" />
+      <p className="reveal-caption">
+        Some artworks still hang in museums,<br />
+        seen and admired by thousands.
+      </p>
     </div>
   );
 };

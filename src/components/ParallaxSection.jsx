@@ -110,11 +110,6 @@ const ParallaxSection = () => {
         </div>
       </div>
 
-      <p className="parallax-caption">
-        Some artworks still hang in museums,<br />
-        seen and admired by thousands.
-      </p>
-
       <p className="scroll-to-explore">Scroll to explore</p>
     </section>
   );
