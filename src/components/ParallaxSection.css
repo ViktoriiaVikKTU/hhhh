@@ -79,6 +79,23 @@
 	will-change: transform;
 }
 
+/* Centered caption below main title */
+.parallax-caption {
+	font-family: "Playfair Display", serif;
+	font-size: 40px;
+	font-weight: 400;
+	color: #F4EDDD;
+	text-align: center;
+	line-height: 1.4;
+	position: absolute;
+	bottom: 120px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	max-width: 700px;
+	margin: 0;
+}
+
 /* Стиль для тексту */
 .scroll-to-explore {
 	color: #F4EDDD;
