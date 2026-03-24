@@ -99,7 +99,7 @@ const RevealSection = ({ caption }) => {
   }, []);
 
   return (
-    <div className="scene">
+    <div className="scene" data-snap-section>
       <img className="photo-under" src="img/photo.png" alt="Photo" />
       <img className="flowers" src="img/flower.png" alt="Flowers" />
       <canvas ref={canvasRef} className="revealCanvas" />

@@ -3,8 +3,11 @@ import './index.css';
 import Header from './components/Header';
 import ParallaxSection from './components/ParallaxSection';
 import RevealSection from './components/RevealSection';
+import useSectionSnap from './hooks/useSectionSnap';
 
 const App = () => {
+  useSectionSnap();
+
   return (
     <div>
       <Header />

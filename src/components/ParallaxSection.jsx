@@ -88,6 +88,7 @@ const ParallaxSection = () => {
     <section
       ref={sectionRef}
       className="parallax"
+      data-snap-section
       style={{
         background: 'linear-gradient(rgba(29, 20, 8, 0.868), rgba(29, 20, 8, 0.912)), url("img/main_background.png") center/cover no-repeat',
         height: '100vh',
