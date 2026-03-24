@@ -10,6 +10,7 @@ const App = () => {
       <Header />
       <ParallaxSection />
       <RevealSection />
+      <RevealSection caption={<>Your second line one here,<br />and your second line two here.</>} />
     </div>
   );
 };

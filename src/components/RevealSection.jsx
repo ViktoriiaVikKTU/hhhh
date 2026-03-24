@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './RevealSection.css';
 
-const RevealSection = () => {
+const RevealSection = ({ caption }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -102,10 +102,14 @@ const RevealSection = () => {
     <div className="scene">
       <img className="photo-under" src="img/photo.png" alt="Photo" />
       <img className="flowers" src="img/flower.png" alt="Flowers" />
-      <canvas ref={canvasRef} id="revealCanvas" />
+      <canvas ref={canvasRef} className="revealCanvas" />
       <p className="reveal-caption">
-        Some artworks still hang in museums,<br />
-        seen and admired by thousands.
+        {caption ?? (
+          <>
+            Some artworks still hang in museums,<br />
+            seen and admired by thousands.
+          </>
+        )}
       </p>
     </div>
   );
