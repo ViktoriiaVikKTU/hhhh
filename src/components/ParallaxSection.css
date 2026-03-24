@@ -79,7 +79,7 @@
 	will-change: transform;
 }
 
-/* Centered caption below main title */
+/* Caption centered over the top of the second section */
 .parallax-caption {
 	font-family: "Playfair Display", serif;
 	font-size: 40px;
@@ -88,12 +88,13 @@
 	text-align: center;
 	line-height: 1.4;
 	position: absolute;
-	bottom: 120px;
+	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, 50%);
 	width: 90%;
 	max-width: 700px;
 	margin: 0;
+	z-index: 10;
 }
 
 /* Стиль для тексту */
