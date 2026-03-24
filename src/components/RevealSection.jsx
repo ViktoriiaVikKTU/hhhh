@@ -21,15 +21,15 @@ const RevealSection = ({ caption }) => {
 
     const onMouseMove = (e) => {
       pts.push({
-        x: e.clientX,
-        y: e.clientY,
+        x: e.offsetX,
+        y: e.offsetY,
         age: 0,
         maxAge: 80 + Math.random() * 40,
         w: 50 + Math.random() * 30,
       });
       if (pts.length > 200) pts.shift();
     };
-    window.addEventListener('mousemove', onMouseMove);
+    canvas.addEventListener('mousemove', onMouseMove);
 
     // ── Drawing helpers ─────────────────────────────────────────────────────
     const drawPass = (widthMult, alphaMult) => {
@@ -93,7 +93,7 @@ const RevealSection = ({ caption }) => {
 
     return () => {
       window.removeEventListener('resize',    resizeCanvas);
-      window.removeEventListener('mousemove', onMouseMove);
+      canvas.removeEventListener('mousemove', onMouseMove);
       cancelAnimationFrame(rafId);
     };
   }, []);
