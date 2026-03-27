@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import './Header.css';
 
 const Header = () => {
-  return (
+  return ReactDOM.createPortal(
     <header className="header">
       <a className="header__logo" href="/">LOST &amp; FOUND</a>
       <nav>
@@ -12,7 +13,8 @@ const Header = () => {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </header>,
+    document.body
   );
 };
 
