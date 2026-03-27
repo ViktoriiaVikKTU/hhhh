@@ -1,15 +1,13 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
-gsap.registerPlugin(ScrollToPlugin);
 
 const DURATION = 1;
 const EASE     = 'power2.inOut';
 
 /**
  * Intercepts wheel / keyboard / touch events and snaps the page to the
- * nearest [data-snap-section] element using a GSAP scrollTo tween.
+ * nearest [data-snap-section] element using a GSAP proxy tween that drives
+ * window.scrollTo() directly — avoids ScrollToPlugin scroll-container issues.
  */
 const useSectionSnap = () => {
   const isAnimating  = useRef(false);
@@ -28,11 +26,19 @@ const useSectionSnap = () => {
       isAnimating.current  = true;
       currentIndex.current = index;
 
-      gsap.to(window, {
-        scrollTo:   { y: sections[index], autoKill: false },
+      const startY  = window.scrollY;
+      const targetY = sections[index].getBoundingClientRect().top + window.scrollY;
+      const proxy   = { y: startY };
+
+      gsap.to(proxy, {
+        y:          targetY,
         duration:   DURATION,
         ease:       EASE,
-        onComplete: () => { isAnimating.current = false; },
+        onUpdate:   () => { window.scrollTo(0, proxy.y); },
+        onComplete: () => {
+          window.scrollTo(0, targetY);
+          isAnimating.current = false;
+        },
       });
     };
 
