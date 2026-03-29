@@ -47,3 +47,40 @@
 	z-index: 100;
 	pointer-events: none;
 }
+
+.discover-btn {
+	display: flex;
+	width: 270px;
+	padding: 9px 9px 9px 30px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 64px;
+	border: 1px solid #442D26;
+	background: transparent;
+	cursor: pointer;
+	position: absolute;
+	bottom: 48px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+}
+
+.discover-btn__text {
+	color: #000;
+	font-family: Inter, sans-serif;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.discover-btn__circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 51px;
+	height: 51px;
+	flex-shrink: 0;
+	border-radius: 51px;
+	background: #442D26;
+}
