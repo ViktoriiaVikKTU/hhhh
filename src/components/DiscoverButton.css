@@ -8,11 +8,8 @@
 	border: 1px solid #442D26;
 	background: transparent;
 	cursor: pointer;
-	position: absolute;
-	bottom: 48px;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 100;
+	margin-top: 65px;
+	pointer-events: auto;
 }
 
 .discover-btn__text {

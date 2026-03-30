@@ -104,15 +104,17 @@ const RevealSection = ({ caption }) => {
       <img className="photo-under" src="img/photo.png" alt="Photo" />
       <img className="flowers" src="img/flower.png" alt="Flowers" />
       <canvas ref={canvasRef} className="revealCanvas" />
-      <p className="reveal-caption">
-        {caption ?? (
-          <>
-            Some artworks still hang in museums,<br />
-            seen and admired by thousands.
-          </>
-        )}
-      </p>
-      <DiscoverButton />
+      <div className="reveal-content">
+        <p className="reveal-caption">
+          {caption ?? (
+            <>
+              Some artworks still hang in museums,<br />
+              seen and admired by thousands.
+            </>
+          )}
+        </p>
+        <DiscoverButton />
+      </div>
     </div>
   );
 };
