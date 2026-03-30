@@ -10,6 +10,13 @@
 	cursor: pointer;
 	margin-top: 65px;
 	pointer-events: auto;
+	transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.discover-btn:hover,
+.discover-btn:active {
+	background: #442D26;
+	border-color: #442D26;
 }
 
 .discover-btn__text {
@@ -19,6 +26,12 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	transition: color 0.25s ease;
+}
+
+.discover-btn:hover .discover-btn__text,
+.discover-btn:active .discover-btn__text {
+	color: #F4EDDD;
 }
 
 .discover-btn__circle {
@@ -30,4 +43,16 @@
 	flex-shrink: 0;
 	border-radius: 51px;
 	background: #442D26;
+	transition: background 0.25s ease;
+}
+
+.discover-btn:hover .discover-btn__circle,
+.discover-btn:active .discover-btn__circle {
+	background: #F4EDDD;
+}
+
+.discover-btn:hover .discover-btn__circle svg path,
+.discover-btn:active .discover-btn__circle svg path {
+	stroke: #442D26;
+	transition: stroke 0.25s ease;
 }
