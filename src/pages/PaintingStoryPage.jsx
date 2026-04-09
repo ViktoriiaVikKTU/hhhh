@@ -25,6 +25,7 @@ function PaintingStoryPage() {
   });
 
   const detailsImageRef = useRef(null);
+  const detailsContainerRef = useRef(null);
 
   useEffect(() => {
     if (!id) {
@@ -86,10 +87,10 @@ function PaintingStoryPage() {
 
   useEffect(() => {
     const updateRenderedSize = () => {
-      if (detailsImageRef.current) {
+      if (detailsContainerRef.current) {
         setDetailsBaseRenderedSize({
-          width: detailsImageRef.current.clientWidth || 1,
-          height: detailsImageRef.current.clientHeight || 1,
+          width: detailsContainerRef.current.clientWidth || 1,
+          height: detailsContainerRef.current.clientHeight || 1,
         });
       }
     };
@@ -175,10 +176,12 @@ function PaintingStoryPage() {
       height: e.target.naturalHeight || 1,
     });
 
-    setDetailsBaseRenderedSize({
-      width: e.target.clientWidth || 1,
-      height: e.target.clientHeight || 1,
-    });
+    if (detailsContainerRef.current) {
+      setDetailsBaseRenderedSize({
+        width: detailsContainerRef.current.clientWidth || 1,
+        height: detailsContainerRef.current.clientHeight || 1,
+      });
+    }
   };
 
   const details = useMemo(() => {
@@ -320,7 +323,7 @@ function PaintingStoryPage() {
       {details.length > 0 && (
         <div className="painting-details-journey">
           <div className="painting-details-journey__sticky">
-            <div className="painting-details-journey__image-container">
+            <div className="painting-details-journey__image-container" ref={detailsContainerRef}>
               <img
                 ref={detailsImageRef}
                 className="painting-details-journey__image"
@@ -339,7 +342,7 @@ function PaintingStoryPage() {
               />
               <div
                 className="painting-details-journey__spotlight"
-                style={{ left: `${spotX}%`, top: `${spotY}%` }}
+                style={{ left: "50%", top: "50%" }}
               />
             </div>
 
