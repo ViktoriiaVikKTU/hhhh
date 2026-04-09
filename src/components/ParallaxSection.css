@@ -1,0 +1,112 @@
+/* TEXT */
+.lost-found-orig {
+	color: #3D3333;
+	text-align: center;
+	text-shadow: 0 -2px 25.1px rgba(0, 0, 0, 0.35);
+	font-family: "Instrument Serif", "Playfair Display", serif;
+	font-size: clamp(36px, 6vw, 96px);
+	font-weight: 400;
+	line-height: normal;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+/* Lit spotlight layer — sits on top, same position */
+.lost-found-lit {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+	text-align: center;
+	font-family: "Instrument Serif", "Playfair Display", serif;
+	font-size: clamp(36px, 6vw, 96px);
+	font-weight: 400;
+	line-height: normal;
+
+	background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	pointer-events: none;
+	z-index: 10;
+}
+
+/* Контейнер для секції */
+.parallax {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	perspective: 800px;
+}
+
+.lost-found-orig-span {
+	font-family: 'Instrument Serif', serif;
+	font-size: clamp(36px, 6vw, 96px);
+	font-weight: 400;
+}
+
+.lost-found-orig-span2 {
+	font-family: 'IslandMoments', serif;
+	font-size: clamp(46px, 7.5vw, 121px);
+	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+	.lost-found-orig-span,
+	.lost-found-orig-span2 {
+		font-size: calc(8vw + 20px);
+	}
+}
+
+
+.frame-main {
+	width: 50vw;
+	height: auto;
+	max-width: 500px;
+	aspect-ratio: 271/298;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-style: preserve-3d;
+	will-change: transform;
+}
+
+/* Стиль для тексту */
+.scroll-to-explore {
+	color: #F4EDDD;
+	font-family: "Instrument Serif";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.8;
+	animation: fadeIn 5s ease-in-out 6s forwards;
+}
+
+/* Оголошення анімації fadeIn */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+

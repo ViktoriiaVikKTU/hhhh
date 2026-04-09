@@ -1,0 +1,46 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background: rgba(29, 20, 8, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.header__logo {
+    font-family: "Instrument Serif", "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #f4eddd;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    font-family: "Instrument Serif", "Playfair Display", serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f4eddd;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.header__nav a:hover {
+    opacity: 1;
+}
