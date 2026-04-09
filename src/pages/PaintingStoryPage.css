@@ -1,0 +1,182 @@
+/* ── Page wrapper ────────────────────────────────────────────────────────── */
+.painting-story-page {
+  background: #1d1408;
+  color: #f4eddd;
+}
+
+.painting-story-loading,
+.painting-story-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #f4eddd;
+  background: #1d1408;
+}
+
+/* ── Hero journey ─────────────────────────────────────────────────────────── */
+.painting-journey {
+  position: relative;
+  height: 300vh;
+}
+
+.painting-journey__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.painting-journey__image-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.painting-journey__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.painting-journey__text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  will-change: opacity;
+}
+
+.painting-journey__title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 400;
+  margin: 0;
+  color: #f4eddd;
+}
+
+.painting-journey__artist {
+  font-family: Inter, sans-serif;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 300;
+  margin: 0;
+  color: #c9bfaf;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.painting-journey__intro {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(14px, 1.8vw, 20px);
+  font-style: italic;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+  color: #e0d6c6;
+}
+
+/* ── Details journey ─────────────────────────────────────────────────────── */
+.painting-details-journey {
+  position: relative;
+  height: 400vh;
+}
+
+.painting-details-journey__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.painting-details-journey__image-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.painting-details-journey__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  will-change: transform, width, height;
+}
+
+.painting-details-journey__spotlight {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid rgba(244, 237, 221, 0.6);
+  box-shadow:
+    0 0 0 9999px rgba(0, 0, 0, 0.55),
+    0 0 40px 12px rgba(244, 237, 221, 0.15);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: left, top;
+}
+
+.painting-details-journey__detail-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(16px, 2.2vw, 26px);
+  font-style: italic;
+  color: #f4eddd;
+  max-width: 460px;
+  line-height: 1.6;
+  margin: 0 0 56px 80px;
+  padding: 24px 32px;
+  background: rgba(29, 20, 8, 0.72);
+  border-left: 2px solid rgba(244, 237, 221, 0.35);
+}
+
+/* ── History / last section ─────────────────────────────────────────────── */
+.painting-history-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px;
+  background: #1d1408;
+}
+
+.painting-history-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 720px;
+  text-align: center;
+}
+
+.painting-history-section__text {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(18px, 2.4vw, 32px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #f4eddd;
+  margin: 0;
+}
+
+/* DiscoverButton sits directly below the text — no animation override needed */
+.painting-history-section__content .discover-btn {
+  margin-top: 65px;
+}
